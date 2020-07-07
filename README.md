@@ -1,4 +1,4 @@
-to before serving the appliction:
+before serving the appliction:
 
 run the commands:
 
