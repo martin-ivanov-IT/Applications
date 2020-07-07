@@ -1,0 +1,133 @@
+<div class="form-container">
+
+    <form #appForm="ngForm" (ngSubmit)="onSubmit(appForm)">
+
+        <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+                <input class="input" name="name" [ngModel]="application.name" type="text" placeholder="Name" required>
+              </div>
+        </div>
+
+        <br>
+
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input" name="email" [ngModel]="application.email" type="email" placeholder="Email" required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+        </div>
+
+        <br>
+
+        <div class="field">
+            <label class="label">Age</label>
+            <div class="control">
+                <input class="input" type="number" id="quantity" name="age" [ngModel]="application.age" min="18" max="99" placeholder="Age" required>
+              </div>
+        </div>
+
+        <br>
+
+        <div class="field">
+            <label class="label">Phone Number</label>
+            <p class="control has-icons-left has-icons-right">
+                <input class="input" type="tel" placeholder="Phone" name="phoneNumber" [ngModel] = "application.phoneNumber" required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-phone"></i>
+                </span>
+              </p>
+        </div>
+
+        <br>
+
+        <div class="field">
+            <label class="label">Preferred Way of Communication</label>
+            <div class="control">
+                <label class="radio">
+                  <input type="radio" name="answerEmail" [ngModel] = "application.answerEmail">
+                  Email
+                </label>
+                <label class="radio">
+                  <input type="radio" name="answerPhone"   [ngModel] = "application.answerPhone">
+                  Phone
+                </label>
+              </div>
+        </div>
+
+        <br>
+
+          <div class="field">
+            <label class="label">English Level</label>
+            <div class="control">
+              <div class="select" >
+                <select name="englishLevel"   [ngModel] = "application.englishLevel" required>
+                  <option>B1 (Intermediate English)</option>
+                  <option>B2 (Upper-Intermediate)</option>
+                  <option>C1 (Advanced English)</option>
+                  <option>C2 (Proficiency)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="field">
+            <label class="label">Available to Start</label>
+            <div class="control">
+                <input class="input"  name="date"   [ngModel] = "application.date" type="date" required>
+              </div>
+        </div>
+
+        <br>
+
+        <div class="field">
+            <label class="label">Technical Skills and Courses</label>
+            <div class="control">
+                <textarea  name="skills"   [ngModel] = "application.skills" class ="textarea"   ></textarea>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="field">
+            <label class="label">Short Personal Presentation (e.g. reason for joining the program)</label>
+            <div class="control">
+                <textarea class ="textarea" name="presentation"   [ngModel] = "application.presentation"  ></textarea>
+            </div>
+        </div>
+
+        <br>
+
+        <label class="checkbox">
+            <input type="checkbox" name="isFromhome"   [ngModel] = "application.isFromhome">
+            Study from home
+          </label>
+
+          <br>
+
+          <div class="field is-grouped is-pulled-right">
+            <div class="control">
+                <button class="button is-text" type="button" (click)="cancel()" >Cancel</button>
+            </div>
+
+            <div class="control">
+                <button class="button is-success" type="submit" [disabled]= "!appForm.valid">Save</button>
+            </div>
+        </div>
+
+        
+
+
+        
+
+       
+
+
+    </form>
+
+</div>

@@ -1,0 +1,21 @@
+<div class="main-container">
+
+    <div class="applications-list">
+
+        <app-application-card 
+        *ngFor = "let application of applications; index as i" 
+        [link]="i"
+        (delete)="deleteApplication(application)"
+        [name] = "application.name" 
+      
+        
+        ></app-application-card>
+       
+        
+    </div>
+
+    <button class = "button floating-add-button is-primary" routerLink="new">+ Add Application</button>
+
+
+
+</div>
